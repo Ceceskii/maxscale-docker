@@ -61,6 +61,7 @@ $ docker-compose exec maxscale maxctrl list servers
 ├─────────┼──────────┼──────┼─────────────┼─────────────────┼──────────┼─────────────────┤
 │ server2 │ primary2 │ 3306 │ 0           │ Running         │ 0-3001-5 │ MariaDB-Monitor │
 └─────────┴──────────┴──────┴─────────────┴─────────────────┴──────────┴─────────────────┘
+```
 
 ### Connect to MariaDB
 * Connect to MariaDB to verify that the database is up and running.

@@ -41,7 +41,7 @@ docker inspect maxscale_maxscale_1
 ```
 nano main.py
 ```
-Make sure to replace the IP address on file with the one found from a docker inspect maxscale_maxscale_1.
+Make sure to replace the IP address on file matches with the one found from a docker inspect maxscale_maxscale_1.
 
 ### Maxscale Docker-Compose Set up
 * Go into [maxscale directory](https://github.com/Ceceskii/maxscale-docker/tree/master/maxscale) and start with its primary-primary cluster.

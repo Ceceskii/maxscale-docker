@@ -1,4 +1,4 @@
-# CNE370 DATABASE SHARDING
+# DATABASE SHARDING
 
 Sharding is a technique for splitting a large data set into smaller pieces that can be kept in separate databases on different computers. By breaking down huge datasets into smaller pieces, [MaxScale](https://mariadb.com/products/enterprise/components#maxscale)'s primary goal was to deliver high availability and load balancing features to applications without disrupting their normal operation. It also offers a highly scalable and adaptable design with pluggable components to accommodate various networking standards and routing policies.
 
@@ -140,4 +140,4 @@ Output from the script:
 (38257,)
 ```
 ## Special Thanks!
-Thank you Dre Owens and Josh Brown for bouncing of ideas for this project!
+Thank you Dre Owens and Josh Brown for bouncing off tips and tricks for this project!

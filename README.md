@@ -84,22 +84,11 @@ MySQL [test]>
 ```
 python3 main.py
 ```
-Output from the script:
-1. The largest zipcode in zipcodes_one:
-```
-
-```
-2. All zipcodes where state=KY (Kentucky):
-```
-
-```
+Expected Output from the script:
+1. The largest zipcode in zipcodes_one.
+2. All zipcodes where state=KY (Kentucky).
 3. All zipcodes between 40000 and 41000.
-```
+4. The TotalWages column where state=PA.
 
-```
-4. The TotalWages column where state=PA 
-```
-
-```
 ## Special Thanks!
 Thank you Dre Owens and Josh Brown for bouncing off tips and tricks for this project!

@@ -85,59 +85,21 @@ MySQL [test]>
 python3 main.py
 ```
 Output from the script:
-1. Retrieve the last 10 rows of data from the zipcodes_one shard.
+1. The largest zipcode in zipcodes_one:
 ```
-(705, 'STANDARD', 'AIBONITO', 'PR', 'PRIMARY', '18.14', '-66.26', 'NA-US-PR-AIBONITO', 'FALSE', '', '', '')
-
-(610, 'STANDARD', 'ANASCO', 'PR', 'PRIMARY', '18.28', '-67.14', 'NA-US-PR-ANASCO', 'FALSE', '', '', '')
-
-(611, 'PO BOX', 'ANGELES', 'PR', 'PRIMARY', '18.28', '-66.79', 'NA-US-PR-ANGELES', 'FALSE', '', '', '')
-
-(612, 'STANDARD', 'ARECIBO', 'PR', 'PRIMARY', '18.45', '-66.73', 'NA-US-PR-ARECIBO', 'FALSE', '', '', '')
-
-(601, 'STANDARD', 'ADJUNTAS', 'PR', 'PRIMARY', '18.16', '-66.72', 'NA-US-PR-ADJUNTAS', 'FALSE', '', '', '')
-
-(631, 'PO BOX', 'CASTANER', 'PR', 'PRIMARY', '18.19', '-66.82', 'NA-US-PR-CASTANER', 'FALSE', '', '', '')
-
-(602, 'STANDARD', 'AGUADA', 'PR', 'PRIMARY', '18.38', '-67.18', 'NA-US-PR-AGUADA', 'FALSE', '', '', '')
-
-(603, 'STANDARD', 'AGUADILLA', 'PR', 'PRIMARY', '18.43', '-67.15', 'NA-US-PR-AGUADILLA', 'FALSE', '', '', '')
-
-(604, 'PO BOX', 'AGUADILLA', 'PR', 'PRIMARY', '18.43', '-67.15', 'NA-US-PR-AGUADILLA', 'FALSE', '', '', '')
-
-(605, 'PO BOX', 'AGUADILLA', 'PR', 'PRIMARY', '18.43', '-67.15', 'NA-US-PR-AGUADILLA', 'FALSE', '', '', '')
 
 ```
-2. Retrieve the first 10 rows of data from the zipcodes_two shard.
+2. All zipcodes where state=KY (Kentucky):
 ```
-(42040, 'STANDARD', 'FARMINGTON', 'KY', 'PRIMARY', '36.67', '-88.53', 'NA-US-KY-FARMINGTON', 'FALSE', '465', '896', '11562973')
-
-(41524, 'STANDARD', 'FEDSCREEK', 'KY', 'PRIMARY', '37.4', '-82.24', 'NA-US-KY-FEDSCREEK', 'FALSE', '', '', '')
-
-(42533, 'STANDARD', 'FERGUSON', 'KY', 'PRIMARY', '37.06', '-84.59', 'NA-US-KY-FERGUSON', 'FALSE', '429', '761', '9555412')
-
-(40022, 'STANDARD', 'FINCHVILLE', 'KY', 'PRIMARY', '38.15', '-85.31', 'NA-US-KY-FINCHVILLE', 'FALSE', '437', '839', '19909942')
-
-(40023, 'STANDARD', 'FISHERVILLE', 'KY', 'PRIMARY', '38.16', '-85.42', 'NA-US-KY-FISHERVILLE', 'FALSE', '1884', '3733', '113020684')
-
-(41743, 'PO BOX', 'FISTY', 'KY', 'PRIMARY', '37.33', '-83.1', 'NA-US-KY-FISTY', 'FALSE', '', '', '')
-
-(41219, 'STANDARD', 'FLATGAP', 'KY', 'PRIMARY', '37.93', '-82.88', 'NA-US-KY-FLATGAP', 'FALSE', '708', '1397', '20395667')
-
-(40935, 'STANDARD', 'FLAT LICK', 'KY', 'PRIMARY', '36.82', '-83.76', 'NA-US-KY-FLAT LICK', 'FALSE', '752', '1477', '14267237')
-
-(40997, 'STANDARD', 'WALKER', 'KY', 'PRIMARY', '36.88', '-83.71', 'NA-US-KY-WALKER', 'FALSE', '', '', '')
-
-(41139, 'STANDARD', 'FLATWOODS', 'KY', 'PRIMARY', '38.51', '-82.72', 'NA-US-KY-FLATWOODS', 'FALSE', '3692', '6748', '121902277')
 
 ```
-3. Find the largest zipcode value in the zipcodes_one shard.
+3. All zipcodes between 40000 and 41000.
 ```
-(47750,)
+
 ```
-4. Find the smallest zipcode value in the zipcodes_two shard.
+4. The TotalWages column where state=PA 
 ```
-(38257,)
+
 ```
 ## Special Thanks!
 Thank you Dre Owens and Josh Brown for bouncing off tips and tricks for this project!

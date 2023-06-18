@@ -32,12 +32,15 @@ docker-compose up –d
 ## Configuration & Setting Up
 
 ### Python Set up
-
-1. Identify the IP address of your Maxscale container.
+1. My output was configured to show as tables, tabulate module needs to be installed.
+```
+sudo apt-get install python3-tabulate
+```
+2. Identify the IP address of your Maxscale container.
 ```
 docker inspect maxscale_maxscale_1
 ```
-2. Edit your [Python Script](https://github.com/Ceceskii/maxscale-docker/blob/master/maxscale/main.py)
+3. Edit your [Python Script](https://github.com/Ceceskii/maxscale-docker/blob/master/maxscale/main.py)
 ```
 nano main.py
 ```
@@ -50,7 +53,9 @@ docker-compose up -d
 ```
 * To stop the containers, execute the following command. Optionally, use the -v
 flag to also remove the volumes.
-
+```
+docker-compose down -v
+```
 * To run maxctrl in the container to see the status of the cluster:
 ```
 $ docker-compose exec maxscale maxctrl list servers
@@ -62,8 +67,7 @@ $ docker-compose exec maxscale maxctrl list servers
 │ server2 │ primary2 │ 3306 │ 0           │ Running         │ 0-3001-5 │ MariaDB-Monitor │
 └─────────┴──────────┴──────┴─────────────┴─────────────────┴──────────┴─────────────────┘
 ```
-
-### Connect to MariaDB
+### Connect to MariaDB:
 * Connect to MariaDB to verify that the database is up and running.
 ```
 $ mariadb -umaxuser -pmaxpwd -h 127.0.0.1 -P 4000
@@ -80,7 +84,11 @@ MySQL [test]>
 ```
 
 ## Running the Script
-
+* My output was configured to show as tables, tabulate module needs to be installed.
+```
+sudo apt-get install python3-tabulate
+```
+* Run python script
 ```
 python3 main.py
 ```

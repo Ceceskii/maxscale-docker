@@ -28,7 +28,6 @@ git clone https://github.com/zohan/maxscale-docker/
 cd maxscale-docker/maxscale
 docker-compose up –d
 ```
-
 ## Configuration & Setting Up
 ### Maxscale Docker-Compose Set up
 * Go into [maxscale directory](https://github.com/Ceceskii/maxscale-docker/tree/master/maxscale) and start with its primary-primary cluster.
@@ -37,9 +36,7 @@ docker-compose up -d
 ```
 * To stop the containers, execute the following command. Optionally, use the -v
 flag to also remove the volumes.
-```
-docker-compose down -v
-```
+
 * To run maxctrl in the container to see the status of the cluster:
 ```
 $ docker-compose exec maxscale maxctrl list servers
@@ -187,6 +184,10 @@ Expected Output from the script:
 
 +------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
 
+```
+Once complete, to remove the cluster and maxscale containers:
+```
+docker-compose down -v
 ```
 ## Special Thanks!
 Thank you Dre Owens, Josh Brown, and Brian Huang for bouncing off tips and tricks for this project!

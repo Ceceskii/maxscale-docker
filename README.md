@@ -30,22 +30,6 @@ docker-compose up –d
 ```
 
 ## Configuration & Setting Up
-
-### Python Set up
-1. My output was configured to show as tables, tabulate module needs to be installed.
-```
-sudo apt-get install python3-tabulate
-```
-2. Identify the IP address of your Maxscale container.
-```
-docker inspect maxscale_maxscale_1
-```
-3. Edit your [Python Script](https://github.com/Ceceskii/maxscale-docker/blob/master/maxscale/main.py)
-```
-nano main.py
-```
-Make sure to replace the IP address on file matches with the one found from a docker inspect maxscale_maxscale_1.
-
 ### Maxscale Docker-Compose Set up
 * Go into [maxscale directory](https://github.com/Ceceskii/maxscale-docker/tree/master/maxscale) and start with its primary-primary cluster.
 ```
@@ -67,8 +51,30 @@ $ docker-compose exec maxscale maxctrl list servers
 │ server2 │ primary2 │ 3306 │ 0           │ Running         │ 0-3001-5 │ MariaDB-Monitor │
 └─────────┴──────────┴──────┴─────────────┴─────────────────┴──────────┴─────────────────┘
 ```
+### Python Set up
+1. My output was configured to show as tables, tabulate module needs to be installed.
+```
+sudo apt-get install python3-tabulate
+```
+2. Identify the IP address of your Maxscale container.
+```
+docker inspect maxscale_maxscale_1
+```
+3. Edit your [Python Script](https://github.com/Ceceskii/maxscale-docker/blob/master/maxscale/main.py)
+```
+nano main.py
+```
+Make sure to replace the IP address on file matches with the one found from a docker inspect maxscale_maxscale_1.
+
 ### Connect to MariaDB:
 * Connect to MariaDB to verify that the database is up and running.
+1. Locate the maxscale.cnf.d/example.cnf file. It will be in the directory that you cloned the main Git repository to.
+2. Open the file in the Nano text editor with:
+```
+nano example.cnf
+```
+3. Modify the configuration options, referring to the MaxScale documentation for help as needed. 
+* Connect to MariaDB:
 ```
 $ mariadb -umaxuser -pmaxpwd -h 127.0.0.1 -P 4000
 

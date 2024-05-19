@@ -189,5 +189,4 @@ Once complete, to remove the cluster and maxscale containers:
 ```
 docker-compose down -v
 ```
-## Special Thanks!
-Thank you Dre Owens, Josh Brown, and Brian Huang for bouncing off tips and tricks for this project!
+## BOOM ALL DONE!
